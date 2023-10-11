@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231012 05:17:19.518" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Test" source="D:\work\solf  dev\git\moth_test\robot_test.robot">
+<test id="s1-t1" name="Test When X Is 17" line="8">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>My Session</arg>
+<arg>${API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231012 05:17:19.619" level="INFO">Creating Session using : alias=My Session, url=http://localhost:5000/is_prime/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231012 05:17:19.619" endtime="20231012 05:17:19.619"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>My Session</arg>
+<arg>/17</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20231012 05:17:21.659" level="INFO">GET Request : url=http://localhost:5000/is_prime/17 
+ path_url=/is_prime/17 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20231012 05:17:21.659" level="INFO">GET Response : url=http://localhost:5000/is_prime/17 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/3.0.0 Python/3.12.0', 'Date': 'Wed, 11 Oct 2023 22:17:21 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'Connection': 'close'} 
+ body=True 
+ </msg>
+<msg timestamp="20231012 05:17:21.659" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231012 05:17:19.620" endtime="20231012 05:17:21.660"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.text}</arg>
+<arg>True</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231012 05:17:21.660" endtime="20231012 05:17:21.661"/>
+</kw>
+<doc>Test that the API returns true when x is 17</doc>
+<status status="PASS" starttime="20231012 05:17:19.619" endtime="20231012 05:17:21.661"/>
+</test>
+<test id="s1-t2" name="Test When X Is 36" line="15">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>My Session</arg>
+<arg>${API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231012 05:17:21.662" level="INFO">Creating Session using : alias=My Session, url=http://localhost:5000/is_prime/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231012 05:17:21.662" endtime="20231012 05:17:21.663"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>My Session</arg>
+<arg>/36</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20231012 05:17:23.705" level="INFO">GET Request : url=http://localhost:5000/is_prime/36 
+ path_url=/is_prime/36 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20231012 05:17:23.705" level="INFO">GET Response : url=http://localhost:5000/is_prime/36 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/3.0.0 Python/3.12.0', 'Date': 'Wed, 11 Oct 2023 22:17:23 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'Connection': 'close'} 
+ body=False 
+ </msg>
+<msg timestamp="20231012 05:17:23.705" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231012 05:17:21.663" endtime="20231012 05:17:23.705"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.text}</arg>
+<arg>False</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231012 05:17:23.705" endtime="20231012 05:17:23.706"/>
+</kw>
+<doc>Test that the API returns false when x is 36</doc>
+<status status="PASS" starttime="20231012 05:17:21.662" endtime="20231012 05:17:23.706"/>
+</test>
+<test id="s1-t3" name="Test When X Is 13219" line="22">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>My Session</arg>
+<arg>${API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231012 05:17:23.708" level="INFO">Creating Session using : alias=My Session, url=http://localhost:5000/is_prime/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231012 05:17:23.708" endtime="20231012 05:17:23.708"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>My Session</arg>
+<arg>/13219</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20231012 05:17:25.735" level="INFO">GET Request : url=http://localhost:5000/is_prime/13219 
+ path_url=/is_prime/13219 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20231012 05:17:25.735" level="INFO">GET Response : url=http://localhost:5000/is_prime/13219 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/3.0.0 Python/3.12.0', 'Date': 'Wed, 11 Oct 2023 22:17:25 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'Connection': 'close'} 
+ body=True 
+ </msg>
+<msg timestamp="20231012 05:17:25.735" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231012 05:17:23.708" endtime="20231012 05:17:25.735"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.text}</arg>
+<arg>True</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231012 05:17:25.735" endtime="20231012 05:17:25.736"/>
+</kw>
+<doc>Test that the API returns true when x is 13219</doc>
+<status status="PASS" starttime="20231012 05:17:23.707" endtime="20231012 05:17:25.736"/>
+</test>
+<status status="PASS" starttime="20231012 05:17:19.519" endtime="20231012 05:17:25.737"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Robot Test">Robot Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
