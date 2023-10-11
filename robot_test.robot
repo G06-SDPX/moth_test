@@ -2,7 +2,7 @@
 Library    RequestsLibrary
 
 *** Variables ***
-${API_URL}    http://localhost:5000/is_prime/
+${API_URL}    http://192.168.17.133:5000/is_prime/
 
 *** Test Cases ***
 Test When X Is 17
